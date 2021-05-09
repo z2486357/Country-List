@@ -1,0 +1,97 @@
+<button class="btn btn-white border" style="margin: 15px;" [routerLink]="['../']">
+  Back to list
+</button>
+<div class="margin" *ngIf="displayDetail">
+  <div class="row">
+    <div class="col-md-3">
+      <img class="flag" [src]="displayDetail.flag" [alt]="displayDetail.name" />
+    </div>
+    <div class="col-md-9">
+      <p class="name">{{ displayDetail.name }}</p>
+      <p class="item">{{ displayDetail.nativeName }}</p>
+      <p class="item">
+        Code: {{ displayDetail.alpha2Code }} {{ displayDetail.alpha3Code }}
+      </p>
+      <p class="item">Native Language: {{ displayDetail.nativeName }}</p>
+      <p class="item">Area Code: {{ displayDetail.callingCodes }}</p>
+      <p class="item">Capital: {{ displayDetail.capital }}</p>
+      <p class="multiItem">Currency:</p>
+      <p
+        class="multiItem"
+        *ngFor="let currency of displayDetail.currencies; let i = index"
+      >
+        {{ currency.name }}({{ currency.symbol }})<span
+          *ngIf="i != displayDetail.currencies.length-1"
+          >,
+        </span>
+      </p>
+      <br />
+      <p class="multiItem">Timezones:</p>
+      <p
+        class="multiItem"
+        *ngFor="let timezone of displayDetail.timezones; let i = index"
+      >
+        {{ timezone
+        }}<span *ngIf="i != displayDetail.timezones.length-1">, </span>
+      </p>
+      <br />
+      <p class="item">latitude: {{ displayDetail.latlng[0] }}</p>
+      <p class="item">Longitude: {{ displayDetail.latlng[1] }}</p>
+      <p class="item">Numeric Code: {{ displayDetail.numericCode }}</p>
+      <p class="item">Population: {{ displayDetail.population }}</p>
+      <p class="item">Region: {{ displayDetail.region }}</p>
+      <p class="item">Subregion: {{ displayDetail.subregion }}</p>
+      <p class="multiItem">Regional Blocs:</p>
+      <p
+        class="multiItem"
+        *ngFor="let regionalBloc of displayDetail.regionalBlocs; let i = index"
+      >
+        {{ regionalBloc.name
+        }}<span *ngIf="i != displayDetail.regionalBlocs.length-1">, </span>
+      </p>
+      <br />
+      <p class="item">CIOC Code: {{ displayDetail.cioc }}</p>
+      <p class="item">Demonym: {{ displayDetail.demonym }}</p>
+      <p class="item">Gini coefficient: {{ displayDetail.gini }}</p>
+      <p class="multiItem">Alt Name:</p>
+      <p
+        class="multiItem"
+        *ngFor="let altSpell of displayDetail.altSpellings; let i = index"
+      >
+        {{ altSpell
+        }}<span *ngIf="i != displayDetail.altSpellings.length-1">, </span>
+      </p>
+      <br />
+      <p class="multiItem">Border:</p>
+      <p
+        class="multiItem"
+        *ngFor="let border of displayDetail.borders; let i = index"
+      >
+        {{ border }}<span *ngIf="i != displayDetail.borders.length-1">, </span>
+      </p>
+      <br />
+      <p class="multiItem">Top Level Domain:</p>
+      <p
+        class="multiItem"
+        *ngFor="let tLDomain of displayDetail.topLevelDomain; let i = index"
+      >
+        {{ tLDomain
+        }}<span *ngIf="i != displayDetail.topLevelDomain.length-1">, </span>
+      </p>
+      <br />
+      <p class="multiItem">Translations:</p>
+      <br />
+      <p
+        class="multiItem"
+        *ngFor="let translation of displayDetail.translations | keyvalue"
+        style="margin-left: 15px"
+      >
+        {{ translation.key }}: {{ translation.value }}<br />
+      </p>
+      <button class="btn btn-white border" style="margin: 15px;" [routerLink]="['../']">
+        Back to list
+      </button>
+    </div>
+  </div>
+</div>
+

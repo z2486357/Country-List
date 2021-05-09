@@ -1,0 +1,27 @@
+.flag {
+  max-width: 100%;
+  max-height: 100%;
+  border-style: outset;
+}
+
+.name {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgb(100, 84, 11);
+  font-size: 26px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.item {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.multiItem {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline;
+}
