@@ -1,27 +1,25 @@
-# CountryList
+This is an application of Angular(2+).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+If you are not familiar with how to enter the application, please follow the step:
 
-## Development server
+1.Make sure you installed Angular CLI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1-1.If you did not, use cmd to enter "npm install -g @angular/cli" to install it. (enter without "")
 
-## Code scaffolding
+2.use cmd to enter the folder Country-List
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3.enter npm install
 
-## Build
+4.enter ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+5.open google chrome and enter the website http://localhost:4200
 
-## Running unit tests
+First you enter the website, you can see a list of Country.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+There is a search bar on the left of top. Enter some keyword to search the target country.
 
-## Running end-to-end tests
+There is a pagination on the right of the top. You can use < and > to change 1 page at a time or enter a number to directly go to the page.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+You can use the sort A-Z or Z-A to change the order of the countries.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+By pressing any place of the country, you can see the other information of the country.
